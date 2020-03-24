@@ -1,0 +1,21 @@
+PROJECT:
+  - title:
+      - migration: string,
+      - formField: input,
+      - notes:
+
+  - description:
+      - migration: text,
+      - formField: wysiwyg,
+      - notes: simple tool set
+
+  - headline:
+      - migration: string,
+      - formField: input,
+      - notes: limi 200 characters
+
+  - url:
+      - migration: string,
+      - formField: input,
+      - notes: validate fill url
+
