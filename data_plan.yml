@@ -19,3 +19,22 @@ PROJECT:
       - formField: input,
       - notes: validate fill url
 
+  - sector:
+      - migration: string,
+      - formField: select,
+      - notes: hard code the options & values
+
+  - commercial:
+      - migration: boolean,
+      - formField: checkbox,
+      - notes:
+
+  - launch_date:
+      - migration: date,
+      - formField: date_pickers,
+      - notes: use 2016-12-16 for min. date
+
+  - layout:
+      - migration: string,
+      - formField: input,
+      - notes:
