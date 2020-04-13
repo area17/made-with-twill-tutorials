@@ -19,22 +19,40 @@ PROJECT:
       - formField: input,
       - notes: validate fill url
 
-  - sector:
-      - migration: string,
-      - formField: select,
-      - notes: hard code the options & values
-
-  - commercial:
-      - migration: boolean,
-      - formField: checkbox,
+CONTRIBUTOR:
+  - name:
+      - migration: string
+      - formField: input
       - notes:
 
-  - launch_date:
-      - migration: date,
-      - formField: date_pickers,
-      - notes: use 2016-12-16 for min. date
+  - email:
+      - migration: string
+      - formField: input
+      - notes: validate as email
 
-  - layout:
-      - migration: string,
-      - formField: input,
-      - notes:
+  - twitter:
+      - migration: string
+      - formField: input
+      - notes: validate has @
+
+  - portfolio_link:
+      - migration: string
+      - formField: input
+      - notes: validate as url
+
+  - linkedin:
+      - migration: string
+      - formField: input
+      - notes: validate url with linkedin domain
+
+  - biography:
+      - twill: blockeditor
+
+  - avatar:
+      - twill: medias
+
+  - resume:
+      - twill: file
+
+  - skills:
+      - twill: tags

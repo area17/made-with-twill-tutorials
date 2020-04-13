@@ -14478,6 +14478,10 @@ video {
   transition-duration: 1000ms;
 }
 
+.text_block p {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
