@@ -60,6 +60,13 @@ return [
                     'project_description' => 'required'
                 ]
             ]
+        ],
+        'repeaters' => [
+            'credit' => [
+                'title' => 'Credit',
+                'trigger' => 'Add credit',
+                'component' => 'a17-block-credit'
+            ]
         ]
     ]
 ];

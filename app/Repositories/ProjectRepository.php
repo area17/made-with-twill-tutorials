@@ -23,6 +23,19 @@ class ProjectRepository extends ModuleRepository
         return parent::prepareFieldsBeforeCreate($fields);
     }
 
+    public function afterSave($object, $fields)
+    {
+        $this->updateRepeater($object, $fields, 'credit', 'Credit');
+        parent::afterSave($object, $fields);
+    }
+
+    public function getFormFields($object)
+    {
+        $fields = parent::getFormFields($object);
+        $fields = $this->getFormFieldsForRepeater($object, $fields, 'credit', 'Credit');
+        return $fields;
+    }
+
     public function allProjects()
     {
         return $this->model

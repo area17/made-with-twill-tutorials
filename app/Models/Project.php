@@ -49,6 +49,14 @@ class Project extends Model
         ]
     ];
 
+    //----------- Relationships
+
+    public function credit()
+    {
+        return $this->hasMany(Credit::class)->orderBy('position');
+    }
+
+
     //----------- Mutators & Accessors
 
     public function getDomainAttribute($value)

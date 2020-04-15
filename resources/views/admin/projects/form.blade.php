@@ -112,5 +112,9 @@
         ])
 
     </a17-fieldset>
+
+    <a17-fieldset title="Credits" id="credits" :open="true">
+        @formField('repeater', ['type' => 'credit'])
+    </a17-fieldset>
 @endsection
 

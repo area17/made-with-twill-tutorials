@@ -6,11 +6,14 @@ use A17\Twill\Models\Behaviors\HasBlocks;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
+use App\Models\Presenters\ContributorPresenter;
 use A17\Twill\Models\Model;
 
 class Contributor extends Model
 {
     use HasBlocks, HasSlug, HasMedias, HasFiles;
+
+    public $presenterAdmin = ContributorPresenter::class;
 
     protected $fillable = ['name',
         'email',
@@ -32,4 +35,12 @@ class Contributor extends Model
             ]
         ]
     ];
+
+//----------- Relationships
+
+    public function credits()
+    {
+        return $this->belongsToMany(Credit::class);
+    }
+
 }
