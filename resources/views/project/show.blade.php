@@ -8,8 +8,8 @@
 
     <!-- COVER -->
     <div class="my-32 mx-12 py-32 px-12 bg-twill-grey-2">
-        <img class="w-10/12 lg:w-3/4 mx-auto" 
-        src="{{ $project->image('screengrab_desktop', 'default',['w'=>1200, 'fit'=>null]) }}" 
+        <img class="w-10/12 lg:w-3/4 mx-auto"
+        src="{{ $project->image('screengrab_desktop', 'default',['w'=>1200, 'fit'=>null]) }}"
         alt="{{$project->imageAltText('screengrab_desktop')}}" />
     </div>
 
@@ -28,10 +28,12 @@
                 </div>
                 <div class="w-1/2">
                     <ul>
-                        <li>Frontend: TBD</li>
-                        <li>Frontend: TBD</li>
-                        <li>Frontend: TBD</li>
-                        <li>Frontend: TBD</li>
+            @foreach($project->present()->creditsFormatted as $creditItem)
+                <li>
+                    {!! $creditItem['roleTitle'].": ".$creditItem['contributorList'] !!}
+                </li>
+            @endforeach
+
                     </ul>
                 </div>
             </div>
@@ -48,8 +50,8 @@
 <style>
   .project_description p {
     margin-bottom: 1rem;
-  }  
-</style>    
+  }
+</style>
 @endpush
 
 
