@@ -22,12 +22,10 @@ class CreateContributorsTables extends Migration
             createDefaultSlugsTableFields($table, 'contributor');
         });
 
-        
     }
 
     public function down()
     {
-        
         Schema::dropIfExists('contributor_slugs');
         Schema::dropIfExists('contributors');
     }

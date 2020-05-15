@@ -13,19 +13,15 @@ class CreateProjectsTables extends Migration
             $table->text('description')->nullable();
             $table->string('headline', 200)->nullable();
             $table->string('url', 200)->nullable();
-                        
-        });
 
+        });
         Schema::create('project_slugs', function (Blueprint $table) {
             createDefaultSlugsTableFields($table, 'project');
         });
-
-        
     }
 
     public function down()
     {
-        
         Schema::dropIfExists('project_slugs');
         Schema::dropIfExists('projects');
     }

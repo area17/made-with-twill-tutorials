@@ -9,8 +9,8 @@
     <!-- COVER -->
     <div class="my-32 mx-12 py-32 px-12 bg-twill-grey-2">
         <img class="w-10/12 lg:w-3/4 mx-auto"
-        src="{{ $project->image('screengrab_desktop', 'default',['w'=>1200, 'fit'=>null]) }}"
-        alt="{{$project->imageAltText('screengrab_desktop')}}" />
+             src="{{ $project->image('screengrab_desktop', 'default',['w'=>1200, 'fit'=>null]) }}"
+             alt="{{$project->imageAltText('screengrab_desktop')}}"/>
     </div>
 
     <!-- CONTENT -->
@@ -22,17 +22,17 @@
                 <div class="w-1/2">
                     <ul>
                         <li>Website: <a href="{{$project->url}}" class="text-twill-purple">
-                            {{$project->domain}}</a></li>
+                                {{$project->domain}}</a></li>
                         <li>Released: TBD</li>
                     </ul>
                 </div>
                 <div class="w-1/2">
                     <ul>
-            @foreach($project->present()->creditsFormatted as $creditItem)
-                <li>
-                    {!! $creditItem['roleTitle'].": ".$creditItem['contributorList'] !!}
-                </li>
-            @endforeach
+                        @foreach($project->present()->creditsFormatted as $creditItem)
+                            <li>
+                                {!! $creditItem['roleTitle'].": ".$creditItem['contributorList'] !!}
+                            </li>
+                        @endforeach
 
                     </ul>
                 </div>
@@ -41,17 +41,17 @@
 
         <!-- HTML CONTENT -->
         <div class="w-10/12 lg:w-1/2 mt-32 mx-auto text-twill-grey-3 project_description">
-               {!! $project->description !!}
+            {!! $project->description !!}
         </div>
     </div>
 @endsection
 
 @push('additional_css')
-<style>
-  .project_description p {
-    margin-bottom: 1rem;
-  }
-</style>
+    <style>
+        .project_description p {
+            margin-bottom: 1rem;
+        }
+    </style>
 @endpush
 
 

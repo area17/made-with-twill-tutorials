@@ -4,7 +4,7 @@
             {!! $roleItem !!}
         </li>
     @endforeach
-    
+
     <li class="mt-2 mb-2">
         <strong>Skills</strong> &mdash; {!! $contributor->present()->tagsAsString !!}
     </li>

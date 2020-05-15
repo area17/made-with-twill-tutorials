@@ -1,3 +1,3 @@
 <section class="text_block">
-	{!!$block->input('paragraph')!!}
+    {!!$block->input('paragraph')!!}
 </section>

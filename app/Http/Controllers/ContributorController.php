@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Repositories\ContributorRepository;
 use Illuminate\Http\Request;
 
