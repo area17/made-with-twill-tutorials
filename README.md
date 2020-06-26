@@ -68,29 +68,27 @@ For a quickstart in setting up this particular project see [Per Project Installa
 The YouTube video [Simple setup](https://www.youtube.com/watch?v=XMG6RLeLyjU) also takes you through a fresh install of Laravel &amp; Twill on Homestead. 
 
 
-
 #### Homestead config
 
 - Copy `Homestead.sample.yaml` to `Homestead.yaml`
 - Change the IP at the top if you have another vagrant machine running at the same IP
 - Install composer dependencies `composer install`. This step should be done inside the VM, but in order to get the VM running you need to install the dependencies.
 - Provision your vagrant machine with `vagrant up`
-- In case the system didn't update your `/etc/hosts` file automatically:
-- Add the IP and domain defined at `Homestead.yaml` to your `/etc/hosts` file.
+- In case the system didn't update your `/etc/hosts` file automatically, add the IP and domain defined at `Homestead.yaml` to your `/etc/hosts` file.
 
 
 #### Application setup
 
-- Hop into the VM with `vagrant ssh` and head into the osf folder in `/home/vagrant/code`
-- Install Twill via composer with `composer require area17/twill:"^2.0"`
-- Ensure dependencies are installed with `composer install`
 - Copy `.env.example` as `.env` and update with your local settings (if necessary).
+- Hop into the VM with `vagrant ssh` and head into the project folder in `/home/vagrant/code`
+- Ensure dependencies are installed with `composer install`
 - Generate your application key: `php artisan key:generate`
 - Migrate the database schema: `php artisan migrate`
+- Create your Twill superadmin user: `php artisan twill:superadmin`
 
 
 #### Frontend build
 
 To install dependencies run `npm ci`.
-To build FE assets for dev run `npm run dev-grunt`.
-To build FE assets for production run `npm run prod-grunt`.
+To build FE assets for dev run `npm run dev`.
+To build FE assets for production run `npm run prod`.
