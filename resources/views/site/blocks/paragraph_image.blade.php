@@ -9,8 +9,5 @@
         <img class="w-full" src="{!!$block->image('variable_image', 'default')!!}"/>
     </figure>
 
-    <span class="text_block">
-	{!!$block->input('paragraph')!!}
-</span>
-
-    <section>
+    <span class="text_block">{!!$block->input('paragraph')!!}</span>
+</section>
